@@ -46704,7 +46704,7 @@ function splitMessages(message) {
         messages[0] = messages[0] + rest.join('END_NESTED_COMMIT');
     }
     const conventionalCommits = messages[0]
-        .split(/\r?\n\r?\n(?=(?:feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(?:\(.*?\))?: )/)
+        .split(/\r?\n\r?\n(?=(?:\* )?(?:feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(?:\(.*?\))?: )/)
         .filter(Boolean);
     return [...conventionalCommits, ...messages.slice(1)];
 }
