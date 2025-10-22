@@ -46244,7 +46244,7 @@ class DefaultChangelogNotes {
         // Add raw commits that look like issue-key headers but were not parsed as conventional commits
         if (options.commits) {
             const rawIssueHeader = /^(\[[A-Z][A-Z0-9]+-\d+\]|[A-Z][A-Z0-9]+-\d+)\b/;
-            const conventionalHeader = /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.*?\))?:\s/;
+            const conventionalHeader = /^(feat|feature|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.*?\))?:\s/;
             const mergeHeader = /^Merge\b/;
             const skipRelease = /release[- ]please|^chore\(main\): release/i;
             for (const raw of options.commits) {
@@ -54255,13 +54255,14 @@ const errors_1 = __nccwpck_require__(93637);
 const filter_commits_1 = __nccwpck_require__(26498);
 const CHANGELOG_SECTIONS = [
     { type: 'feat', section: 'Features' },
+    { type: 'feature', section: 'Features' },
     { type: 'fix', section: 'Bug Fixes' },
     { type: 'perf', section: 'Performance Improvements' },
     { type: 'deps', section: 'Dependencies' },
     { type: 'revert', section: 'Reverts' },
     { type: 'docs', section: 'Documentation' },
     { type: 'style', section: 'Styles', hidden: true },
-    { type: 'chore', section: 'Miscellaneous Chores', hidden: true },
+    { type: 'chore', section: 'Miscellaneous Chores' },
     { type: 'refactor', section: 'Code Refactoring', hidden: true },
     { type: 'test', section: 'Tests', hidden: true },
     { type: 'build', section: 'Build System', hidden: true },
@@ -58465,11 +58466,12 @@ exports.filterCommits = void 0;
 const BREAKING_CHANGE_NOTE = 'BREAKING CHANGE';
 const DEFAULT_CHANGELOG_SECTIONS = [
     { type: 'feat', section: 'Features' },
+    { type: 'feature', section: 'Features' },
     { type: 'fix', section: 'Bug Fixes' },
     { type: 'perf', section: 'Performance Improvements' },
     { type: 'revert', section: 'Reverts' },
     { type: 'others', section: 'Others' },
-    { type: 'chore', section: 'Miscellaneous Chores', hidden: true },
+    { type: 'chore', section: 'Miscellaneous Chores' },
     { type: 'docs', section: 'Documentation', hidden: true },
     { type: 'style', section: 'Styles', hidden: true },
     { type: 'refactor', section: 'Code Refactoring', hidden: true },

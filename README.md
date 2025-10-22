@@ -4,6 +4,15 @@
 
 Automate releases with Conventional Commit Messages.
 
+## Build
+npm uninstall release-please
+npm install github:ToolsAiforia/release-please#v3
+npm run build
+git add .
+git commit ***
+git push
+
+
 ## Basic Configuration
 
 1. Create a `.github/workflows/release-please.yml` file with these contents:
